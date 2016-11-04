@@ -1,0 +1,37 @@
+{
+  "name": "google-client",
+  "description": "Wrapper to google/maps services",
+  "version": "1.0.0",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "./node_modules/.bin/mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pearlshare/google-client.git"
+  },
+  "keywords": [
+    "geocode",
+    "google",
+    "location"
+  ],
+  "author": "team@pearlshare.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pearlshare/google-client/issues"
+  },
+  "homepage": "https://github.com/pearlshare/google-client#readme",
+  "dependencies": {
+    "@google/maps": "^0.3.0",
+    "bluebird": "^3.4.6",
+    "debug": "^2.2.0",
+    "location-tools": "git://github.com/pearlshare/location-tools.git"
+  },
+  "devDependencies": {
+    "mocha": "^3.1.2",
+    "should": "^11.1.1"
+  }
+}
