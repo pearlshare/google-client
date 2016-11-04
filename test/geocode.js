@@ -5,11 +5,13 @@ describe("geocode", function () {
 
   var googleClient;
   before(function () {
-    googleClient = new Client("testKey", console);
+    googleClient = new Client({
+      key: "GOOGLE_MAPS_APIKEY",
+      logger: console
+    });
   });
 
   it("should contain geocode", function () {
-    console.log(googleClient)
-    googleClient.geocode.should.be.function();
+    googleClient.should.have.ownProperty("geocode");
   });
 });
