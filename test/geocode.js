@@ -3,15 +3,32 @@ var Client = require("../lib/client");
 
 describe("geocode", function () {
 
-  var googleClient;
-  before(function () {
-    googleClient = new Client({
-      key: "GOOGLE_MAPS_APIKEY",
-      logger: console
+  describe("geocode", function () {
+
+    var googleClient;
+    before(function () {
+      googleClient = new Client({
+        key: "GOOGLE_MAPS_APIKEY"
+      });
+    });
+
+    it("should error if not address provided", function () {
+      (googleClient.geocode).should.throw();
     });
   });
 
-  it("should contain geocode", function () {
-    googleClient.should.have.ownProperty("geocode");
+
+  describe("reverseGeocode", function () {
+
+    var googleClient;
+    before(function () {
+      googleClient = new Client({
+        key: "GOOGLE_MAPS_APIKEY"
+      });
+    });
+
+    it("should error if no latlon is provided", function () {
+      (googleClient.reverseGeocode).should.throw();
+    });
   });
 });
